@@ -14,48 +14,65 @@ This is a pixel-perfect, responsive reproduction of the Soundverse DNA UI, built
 - **Fonts:** Inter & Custom Grotesque styles
 
 ## ✨ Key Features
-1.  **Global Audio Player:**
-    - Continuous playback across page navigation.
-    - Keyboard controls (Space to Play/Pause, Arrows to Seek).
-    - Smooth `slide-up` entrance animation.
-2.  **Dynamic Panels:**
-    - **DNA Panel:** Collapsible sidebar with responsive behavior (Overlay on Mobile, Side-by-side on Desktop).
-    - **Main Content:** Can be hidden/reopened, featuring an "Empty State" placeholder.
-3.  **Micro-Interactions:**
-    - Smooth hover states on Style Cards (Scale + Glow).
-    - Animated sliding toggles in the DNA panel.
-    - Tactile active states on sidebar buttons.
-4.  **Responsive Design:**
-    - Mobile-first approach.
-    - Adaptive grid for Style Cards.
-    - Dynamic sizing for the Artist Hero section ("Coldplay") to prevent text overflow.
+1. **Global Audio Player:**
+   - Continuous playback across page navigation.
+   - Keyboard controls (Space to Play/Pause, Arrows to Seek).
+   - Smooth `slide-up` entrance animation.
+2. **Dynamic Panels:**
+   - **DNA Panel:** Collapsible sidebar with responsive behavior (Overlay on Mobile, Side-by-side on Desktop).
+   - **Main Content:** Can be hidden/reopened, featuring an "Empty State" placeholder.
+3. **Micro-Interactions:**
+   - Smooth hover states on Style Cards (Scale + Glow).
+   - Animated sliding toggles in the DNA panel.
+   - Tactile active states on sidebar buttons.
+4. **Responsive Design:**
+   - Mobile-first approach.
+   - Adaptive grid for Style Cards.
+   - Dynamic sizing for the Artist Hero section ("Coldplay") to prevent text overflow.
 
 ## 📸 Screenshots
 
-| **Desktop View (Main Interface)** | **Mobile View (Responsive)** |
-|:---:|:---:|
-| ![Desktop View](LINK_TO_DESKTOP_IMAGE_HERE) | ![Mobile View](LINK_TO_MOBILE_IMAGE_HERE) |
-| *Full desktop layout with DNA panel open* | *Adaptive layout on smaller screens* |
+### 1. Desktop: Full Interface
+*The complete view with the Artist Hero section and the DNA Control Panel open.*
+![Desktop Full View](https://github.com/user-attachments/assets/26e94ff6-60fa-439b-b2bc-b49d10e5b4eb)
 
-| **DNA Panel (Controls)** | **Global Player (Active)** |
-|:---:|:---:|
-| ![DNA Panel](LINK_TO_DNA_PANEL_IMAGE_HERE) | ![Player](LINK_TO_PLAYER_IMAGE_HERE) |
-| *Collapsible sidebar with sliding toggles* | *Smooth slide-up player with seeking* |
+### 2. Desktop: Empty State (No Artist)
+*The layout handling the state when the main content/artist is hidden or removed.*
+![Desktop No Sidebar](https://github.com/user-attachments/assets/cd51f2ee-600f-4828-b05e-43ed594a935c)
 
-**Micro-Interactions & Hover States**
-![Interactions](LINK_TO_HOVER_STATE_IMAGE_HERE)
-*Demonstration of hover glow effects and active states*
+
+### 3. Desktop: Focus Mode (No DNA)
+*The DNA panel collapsed to maximize the content area.*
+
+![Desktop No Artist](https://github.com/user-attachments/assets/626d3cda-ca77-40d6-bf9a-19e15830a320)
+
+
+
+
+### 4. Mobile View
+<table>
+  <tr>
+    <td align="center" width="30%">
+      <img src="https://github.com/user-attachments/assets/3298015e-22fd-4085-abab-56420a8c3157" width="100%" alt="Mobile View" />
+      <br />
+      <sub><b>Mobile View</b></sub>
+    </td>
+    <td align="center" width="70%">
+      <img src="https://github.com/user-attachments/assets/6209e3f3-c640-4fb1-b4eb-4b7df46fcf3f" width="100%" alt="Tablet View" />
+      <br />
+      <sub><b>Tablet / Desktop View</b></sub>
+    </td>
+  </tr>
+</table>
+
+---
 
 ## ⚙️ Setup & Run
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/krishnafauj/assign2.git](https://github.com/krishnafauj/assign2.git)
-    ```
-2.  **Navigate to the directory:**
-    ```bash
-    cd assign2
-    ```
-3.  **Install dependencies:**
+
+1. **Clone the repository:**
+   ```bash
+   https://github.com/krishnafauj/assign2.git
+ dependencies:**
     ```bash
     npm install
     ```
