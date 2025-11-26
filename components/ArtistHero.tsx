@@ -1,4 +1,3 @@
-// src/components/ArtistHero.tsx
 "use client";
 import React from 'react';
 
@@ -11,23 +10,30 @@ interface ArtistHeroProps {
 
 const ArtistHero = ({ image, name, description, tags }: ArtistHeroProps) => {
   return (
-    <div className="bg-transparent mt-4 w-full">
+    <div className="bg-transparent  w-full relative">
+      
+      {/* THE PURPLE BACKGROUND GLOW (REDUCED)
+        - bg-purple-600/20: Lower opacity (was /40) makes it much fainter.
+        - blur-[60px]: Lower blur (was 90px) keeps it tighter.
+      */}
+      <div className="absolute top-0 right-0 md:left-40 bottom-0 bg-purple-600/20 blur-[60px] rounded-full pointer-events-none z-0 mix-blend-screen" />
+
       <div className="
+         relative z-10 
          flex flex-col md:flex-row 
          items-center md:items-start 
          gap-4 md:gap-6 px-4 
          max-w-6xl mx-auto
       ">
         
-        {/* IMAGE: Kept slightly compact to save width for text */}
+        {/* IMAGE */}
         <div className="
           relative group shrink-0
           w-28 h-28 
           md:w-40 md:h-40 
           lg:w-48 lg:h-48 
           rounded-full overflow-hidden 
-          border-4 border-zinc-900 
-          shadow-[0_0_40px_rgba(168,85,247,0.3)]
+          border-2 border-zinc-800 
         ">
           <img 
             src={image} 
@@ -39,23 +45,16 @@ const ArtistHero = ({ image, name, description, tags }: ArtistHeroProps) => {
         {/* TEXT CONTAINER */}
         <div className="text-center md:text-left flex flex-col justify-center h-full mt-2 md:mt-4 flex-1 min-w-0">
           
-          {/* TITLE ADJUSTMENT:
-             1. Removed 'truncate' (So no "...")
-             2. Reduced Sizes significantly:
-                - Mobile: text-3xl
-                - Tablet/Laptop (md/lg): text-5xl (Stops it from getting too wide)
-                - Wide Screen (xl): text-6xl
-             3. whitespace-nowrap: Forces it to stay on one line no matter what.
-          */}
           <h1 className="
-            font-grotesk font-black uppercase tracking-[0.05em] text-white drop-shadow-xl
-            text-3xl 
-            md:text-5xl 
-            lg:text-5xl 
-            xl:text-6xl
-            mb-2 md:mb-3
-            whitespace-nowrap
-          ">
+              font-grotesk font-black uppercase tracking-[0.05em] text-white
+              text-3xl 
+              md:text-5xl 
+              lg:text-5xl 
+              xl:text-6xl
+              mb-2 md:mb-3
+              whitespace-nowrap
+            "
+          >
             {name}
           </h1>
 
