@@ -3,7 +3,7 @@ import { Home, Search, Library, PlusCircle, Grip } from 'lucide-react';
 
 export default function Sidebar() {
     return (
-        <aside className="fixed left-0 top-0 h-screen w-[84px] bg-black flex flex-col items-center py-5 gap-6 border-rz-50">
+        <aside className="  h-screen w-[84px] bg-black flex flex-col items-center py-5 gap-6 border-rz-50">
 
             {/* Logo area */}
             <div className="mb-2 cursor-pointer group">

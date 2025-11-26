@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google"; // Or whichever font you use
+import { Inter } from "next/font/google";
 import "./globals.css";
-import Sidebar from "../components/Sidebar"; 
+import Sidebar from "@/components/Sidebar";
+import DanPanel from "@/components/DanPanel";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,13 +18,34 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-black text-white `}>
-       
-        <Sidebar />
+      {/* Added bg-black here to ensure full coverage */}
+      <body className={`${inter.className} text-white bg-black`}>
+        
+        {/* MAIN FLEX CONTAINER 
+            1. flex: aligns items in a row
+            2. h-screen: forces app to be full height of viewport
+            3. gap-4: adds space between Sidebar, Dan, and Children
+            4. overflow-hidden: prevents double scrollbars on the body
+        */}
+        <div className="flex h-screen w-full  overflow-hidden">
+          
+          {/* Item 1: Left */}
+          {/* Ensure Sidebar has a defined width inside the component or add w-[width] here */}
+          <Sidebar />
 
-        <main className="ml-[84px] min-h-screen">
-          {children}
-        </main>
+          {/* Item 2: Middle */}
+          {/* Ensure DanPanel has a defined width */}
+          <DanPanel />
+
+          {/* Item 3: Right (The Content) */}
+          {/* flex-1: Tells the main content to take up all REMAINING space
+              overflow-y-auto: Allows only this section to scroll if content is long 
+          */}
+          <main className="flex-1 h-full overflow-y-auto no-scrollbar rounded-tl-lg border-l border-neutral-800 ">
+            {children}
+          </main>
+          
+        </div>
       </body>
     </html>
   );
