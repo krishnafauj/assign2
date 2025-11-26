@@ -4,7 +4,8 @@ import React from 'react';
 import { ChevronLeft, X, Play, Pause } from 'lucide-react';
 import { MUSIC_STYLES } from '@/data'; // Ensure this path matches where you put data.js
 import { usePlayer } from '@/context/PlayerContext'; // Ensure this path matches
-
+import GlobalPlayer from '@/components/GlobalPlayer';
+import SmoothScroll from '@/components/SmoothScroll';
 // --- Sub-Component: StyleCard ---
 // Now integrated with the Audio Player Logic
 const StyleCard = ({ data }: { data: any }) => {
@@ -19,7 +20,7 @@ const StyleCard = ({ data }: { data: any }) => {
     <div
       onClick={() => playTrack(data)}
       className={` 
-        group relative w-full h-64 flex flex-col
+        group relative w-full h-full flex flex-col p-2
         rounded-[20px] 
         cursor-pointer transition-all duration-300
         border 
@@ -72,17 +73,17 @@ export default function Home() {
 
       {/* THE MAIN CARD AREA */}
       {/* matches your: flex-1 my-2 mr-2 ml-3 rounded-[30px] bg-black... */}
-      <div className="flex-1 my-2 mr-2 ml-3 rounded-[30px] bg-black overflow-hidden relative shadow-2xl">
+      <div className="flex-1  mr-2 ml-3 rounded-[30px] bg-black overflow-hidden relative shadow-2xl">
 
         {/* Scrollable Area INSIDE the rounded card */}
         {/* Added pb-32 to ensure content isn't hidden behind the Global Player bar */}
-        <div className="h-full overflow-y-auto scrollbar-hide pb-32">
-
+        <div className="h-full overflow-y-auto scrollbar-hide pb-32 scroll-smooth overscroll-y-contain transform-gpu">
+         
           {/* Background Gradient */}
           <div className="absolute top-0 left-0 right-0 h-[500px] pointer-events-none z-0 bg-gradient-to-b from-purple-900/20 to-black/0" />
 
           {/* Top Nav (Close/Back) */}
-          <div className="flex justify-between items-center relative z-10 px-4 pt-4">
+          <div className="flex justify-between items-center relative z-10 px-4 ">
             <button className="p-4 hover:bg-zinc-900 rounded-full transition-colors text-zinc-400 hover:text-white">
               <ChevronLeft size={28} />
             </button>
@@ -121,7 +122,7 @@ export default function Home() {
 
                 {/* Text Info */}
                 <div className="text-center md:text-left">
-                  <h1 className="font-grotesk text-5xl md:text-6xl font-black mb-4 uppercase tracking-[0.05em] text-white drop-shadow-xl">
+                  <h1 className="font-grotesk text-5xl md:text-6xl font-black mb-4 uppercase tracking-[0.05em] text-white drop-shadow-xl ">
                     Coldplay
                   </h1>
                   <p className="text-zinc-400 font-medium text-[12px] leading-relaxed mb-3">
@@ -135,7 +136,7 @@ export default function Home() {
             </div>
 
             {/* TAB FILTERS */}
-            <div className="flex items-center mb-6 mt-10 border-t gap-2 border-zinc-800/50 pt-6" />
+            <div className="flex items-center mb-3 mt-3 border-t gap-2 border-zinc-800/50 " />
             <div className="mb-8">
               <button className="bg-zinc-800 w-auto min-w-[140px] text-white px-8 mr-2 py-2.5 rounded-full text-[10px] font-extrabold tracking-widest uppercase hover:bg-zinc-700 transition-colors shadow-lg">
                 Core Style
@@ -155,7 +156,10 @@ export default function Home() {
             </div>
 
           </div>
+          
         </div>
+          <GlobalPlayer />
+        
       </div>
     </div>
   );

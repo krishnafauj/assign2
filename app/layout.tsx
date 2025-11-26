@@ -1,10 +1,10 @@
+// src/app/layout.tsx
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/Sidebar";
-import DnaPanel from "@/components/DnaPanel"; // Note: Fixed Typo DanPanel -> DnaPanel
-import { PlayerProvider } from "@/context/PlayerContext"; // IMPORT THIS
-import GlobalPlayer from "@/components/GlobalPlayer";     // IMPORT THIS
+import DnaPanel from "@/components/DnaPanel";
+import { PlayerProvider } from "@/context/PlayerContext"; 
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,21 +21,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} text-white bg-black`}>
-        {/* WRAP EVERYTHING IN PLAYER PROVIDER */}
         <PlayerProvider>
-          
           <div className="flex h-screen w-full overflow-hidden">
             <Sidebar />
             <DnaPanel />
             
-            <main className="flex-1 h-full overflow-y-auto no-scrollbar rounded-tl-lg border-l border-neutral-800 pb-24">
+            {/* The GlobalPlayer is REMOVED from here */}
+            <main className="flex-1 h-full overflow-y-auto no-scrollbar rounded-tl-lg border-l border-neutral-800 pb-0">
               {children}
             </main>
           </div>
-
-          {/* ADD THE PLAYER BAR HERE */}
-          <GlobalPlayer />
-
         </PlayerProvider>
       </body>
     </html>
