@@ -4,7 +4,7 @@ export const MUSIC_STYLES = [
     id: 1,
     title: "Dubstep",
     desc: "Wobbly, Punchy, Dark, Heavy, Aggressive",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYjTC9hOiJE6mUFNIpf-nGb0EQj3QhD0VQbA&s",
+    image: "https://www.musiccircle.in/assets/images/left-music-instrument.webp",
     audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
     active: true
   },
