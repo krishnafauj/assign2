@@ -13,27 +13,25 @@ export const metadata: Metadata = {
   description: "Assignment",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+// src/app/layout.tsx
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body className={`${inter.className} text-white bg-black`}>
         <PlayerProvider>
           <UIProvider>
-            {/* Flex container for the 3-column layout */}
-            <div className="flex h-screen w-full overflow-hidden relative">
+            
+            {/* 1. h-[100dvh]: Force app to fit visible screen (fixes mobile URL bar issue).
+               2. overflow-hidden: Prevent the whole page from scrolling.
+            */}
+            <div className="flex h-[100dvh] w-full overflow-hidden relative">
               
-              {/* 1. Sidebar (Always visible or responsive hidden if needed) */}
               <Sidebar />
-
-              {/* 2. DNA Panel (Collapsible) */}
               <DnaPanel />
               
-              {/* 3. Main Content Area */}
-              <main className="flex-1 h-full overflow-y-auto no-scrollbar rounded-tl-lg border-l border-neutral-800 pb-0 relative">
+              {/* Main Content Area */}
+              <main className="flex-1 h-full overflow-hidden rounded-tl-lg border-l border-neutral-800 pb-0 relative">
                 {children}
               </main>
 

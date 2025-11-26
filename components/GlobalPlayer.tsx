@@ -36,8 +36,13 @@ export default function GlobalPlayer() {
   return (
     <>
       {/* Main Container with Custom Animation Class */}
-      <div className={`
-         absolute bottom-0 w-full h-20 bg-black/90 backdrop-blur-md border-t border-zinc-800 z-50 min-w-[320px]
+     <div className={`
+         /* FIX: Use 'absolute' (not fixed). 
+            This keeps it inside the page.tsx container width. 
+         */
+         absolute bottom-0 left-0 w-full
+         
+         h-20 bg-black/90 backdrop-blur-md border-t border-zinc-800 z-50 min-w-[320px]
          slide-up-anim
       `}>
         

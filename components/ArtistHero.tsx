@@ -13,10 +13,10 @@ const ArtistHero = ({ image, name, description, tags }: ArtistHeroProps) => {
     <div className="bg-transparent  w-full relative">
       
       {/* THE PURPLE BACKGROUND GLOW (REDUCED)
-        - bg-purple-600/20: Lower opacity (was /40) makes it much fainter.
+        - bg-purple-600/10: Lower opacity (was /40) makes it much fainter.
         - blur-[60px]: Lower blur (was 90px) keeps it tighter.
       */}
-      <div className="absolute top-0 right-0 md:left-40 bottom-0 bg-purple-600/20 blur-[60px] rounded-full pointer-events-none z-0 mix-blend-screen" />
+      <div className="absolute top-0 right-0 md:left-40 bottom-0 bg-purple-600/5 blur-[60px] rounded-full pointer-events-none z-0 mix-blend-screen" />
 
       <div className="
          relative z-10 

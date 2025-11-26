@@ -2,17 +2,25 @@
 import React from 'react';
 import { Home, Search, Library, PlusCircle, Grip } from 'lucide-react';
 import { useUI } from '@/context/UiContext'; // Import Hook
+import Image from 'next/image';
 
 export default function Sidebar() {
     const { toggleDna, openMain } = useUI();
 
     return (
-        <aside className="h-screen w-[84px] bg-black flex flex-col items-center py-5 gap-6 border-r border-zinc-900 shrink-0 z-50">
-
+       <aside className={`
+            /* FIX: Changed 'h-screen' to 'h-[100dvh]' */
+            h-[100dvh] 
+            w-[84px] bg-black flex flex-col items-center py-5 gap-6 border-r border-zinc-900 shrink-0 z-50
+        `}>
             {/* Logo area */}
             <div className="mb-2 cursor-pointer group">
-                <div className="bg-gradient-to-tr from-purple-600 to-pink-500 p-1.5 rounded-full opacity-90 group-hover:opacity-100 transition-opacity">
-                    <Grip className="text-white w-5 h-5" />
+                <div className=" p-1.5 rounded-full opacity-90 group-hover:opacity-100 transition-opacity">
+                    <img
+                        src='/logo.png'
+                        alt="App Logo"
+                        className="w-full h-full object-cover grayscale-[20%] contrast-125 transition-transform duration-700 group-hover:scale-110"
+                    />
                 </div>
             </div>
 
@@ -20,7 +28,7 @@ export default function Sidebar() {
             <nav className="flex flex-col gap-6 w-full items-center">
 
                 {/* Add Button -> OPENS MAIN RIGHT PANEL */}
-                <button 
+                <button
                     onClick={openMain}
                     className="text-zinc-400 hover:text-white transition-colors duration-200"
                     title="Open Main Panel"
@@ -40,9 +48,9 @@ export default function Sidebar() {
                 </button>
 
                 {/* DNA Button -> TOGGLES LEFT PANEL */}
-                <button 
+                <button
                     onClick={toggleDna}
-                    className="w-[56px] h-[56px] bg-zinc-800/80 hover:bg-zinc-700 rounded-2xl flex items-center justify-center transition-all duration-200 group mx-auto mt-2"
+                    className="w-[50px] h-[40px] bg-zinc-800/80 hover:bg-zinc-700 rounded-2xl flex items-center justify-center transition-all duration-200 group mx-auto mt-2"
                     title="Toggle DNA Panel"
                 >
                     <span
