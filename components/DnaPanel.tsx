@@ -97,7 +97,7 @@ export default function DnaPanel() {
 
       {/* HEADER */}
       <div className="pb-2 pt-6 shrink-0 flex justify-between items-start pl-6 pr-6 min-w-[320px]">
-        <h1 style={{ fontFamily: '"Power Grotesk Variable", sans-serif', fontWeight: 800, fontSize: '32px', lineHeight: '1', letterSpacing: '0.05em' }} className="uppercase text-white">
+        <h1 className='text-3xl font-grotesk font-black ' >
           DNA
         </h1>
         <button onClick={closeDna} className="text-white hover:text-zinc-400 transition-colors mt-1 active:scale-90 transform duration-200">

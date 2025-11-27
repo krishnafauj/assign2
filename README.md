@@ -70,7 +70,9 @@ This is a pixel-perfect, responsive reproduction of the Soundverse DNA UI, built
 ## ⚙️ Setup & Run
 
 1. **Clone the repository:**
-   ```bash
+   ``
+   
+   `bash
    https://github.com/krishnafauj/assign2.git
  dependencies:**
     ```bash

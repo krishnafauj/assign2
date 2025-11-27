@@ -30,32 +30,32 @@ export default function Sidebar() {
                 {/* Add Button -> OPENS MAIN RIGHT PANEL */}
                 <button
                     onClick={openMain}
-                    className="text-zinc-400 hover:text-white transition-colors duration-200"
+                    className="text-white hover:text-white transition-colors duration-200"
                     title="Open Main Panel"
                 >
                     <PlusCircle size={24} strokeWidth={1.5} />
                 </button>
 
                 {/* Standard Nav */}
-                <button className="text-zinc-400 hover:text-white transition-colors duration-200">
+                <button className="text-white hover:text-white transition-colors duration-200">
                     <Home size={22} strokeWidth={1.5} />
                 </button>
-                <button className="text-zinc-400 hover:text-white transition-colors duration-200">
+                <button className="text-white hover:text-white transition-colors duration-200">
                     <Search size={22} strokeWidth={1.5} />
                 </button>
-                <button className="text-zinc-400 hover:text-white transition-colors duration-200">
+                <button className="text-white hover:text-white transition-colors duration-200">
                     <Library size={22} strokeWidth={1.5} />
                 </button>
 
                 {/* DNA Button -> TOGGLES LEFT PANEL */}
                 <button
                     onClick={toggleDna}
-                    className="w-[50px] h-[40px] bg-zinc-800/80 hover:bg-zinc-700 rounded-2xl flex items-center justify-center transition-all duration-200 group mx-auto mt-2"
+                    className="w-[60px] h-[45px] bg-zinc-800/80 hover:bg-zinc-700 rounded-2xl flex items-center justify-center transition-all duration-200 group mx-auto mt-2"
                     title="Toggle DNA Panel"
                 >
                     <span
-                        className="text-white font-[800] text-[11px] tracking-wide uppercase"
-                        style={{ fontFamily: '"Power Grotesk Variable", sans-serif' }}
+                        className="text-white  text-3xl font-grotesk font-black  text-[16px] tracking-wide uppercase"
+                       
                     >
                         DNA
                     </span>
