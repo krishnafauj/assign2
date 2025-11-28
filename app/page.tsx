@@ -89,7 +89,7 @@ export default function Home() {
           Reopen Content
 
         </button>
-
+           <GlobalPlayer />
       </div>
 
     );
