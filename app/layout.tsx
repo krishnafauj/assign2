@@ -10,8 +10,7 @@ import DnaPanel from "@/components/DnaPanel";
 
 import { PlayerProvider } from "@/context/PlayerContext";
 
-import { UIProvider } from "@/context/UiContext"; // Import Context
-
+import { UIProvider } from "@/context/UiContext"; 
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -26,9 +25,6 @@ export const metadata: Metadata = {
 
 };
 
-
-
-// src/app/layout.tsx
 
 
 
@@ -46,11 +42,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
            
 
-            {/* 1. h-[100dvh]: Force app to fit visible screen (fixes mobile URL bar issue).
-
-               2. overflow-hidden: Prevent the whole page from scrolling.
-
-            */}
+            {}
 
             <div className="flex h-[100dvh] w-full overflow-hidden relative">
 
@@ -61,9 +53,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <DnaPanel />
 
              
-
-              {/* Main Content Area */}
-
               <main className="flex-1 h-full overflow-hidden rounded-tl-lg border-l border-neutral-800 pb-0 relative">
 
                 {children}
